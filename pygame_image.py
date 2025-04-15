@@ -24,15 +24,17 @@ def main():
         
         key_lst = pg.key.get_pressed()
         #print(key_lst[pg.K_UP])
+        a = -1
+        b = 0
         if key_lst[pg.K_UP]:
             kk_rct.move_ip(0, -1)
         if key_lst[pg.K_DOWN]:
-            kk_rct.move_ip(0, +1)
+            kk_rct.move_ip(0, 1)
         if key_lst[pg.K_RIGHT]:
-            kk_rct.move_ip(+1, 0)
+            kk_rct.move_ip(1, 0)
         if key_lst[pg.K_LEFT]:
             kk_rct.move_ip(-1, 0)
-        
+        kk_rct.move_ip(a, b)
         x = tmr%3200#練習9
         screen.blit(bg_img, [-x, 0])#練習6
         screen.blit(bg2_img, [-x + 1600, 0])#練習7
